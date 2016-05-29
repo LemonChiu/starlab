@@ -11,7 +11,7 @@ include(qglviewer/qglviewer.pri)
 # ---------------------------------------------
 DEPENDPATH += parameters
 INCLUDEPATH += parameters
-HEADERS += \ 
+HEADERS += \
     parameters/RichString.h \
     parameters/RichParameterWidget.h \
     parameters/RichParameterSet.h \
@@ -26,14 +26,16 @@ HEADERS += \
     parameters/RichPar.h \
     parameters/RichStringSet.h \
     parameters/ParametersFrame.h \
-    parameters/LineEditWidget.h \  
-    Starlab.h \ 
+    parameters/LineEditWidget.h \
+    Starlab.h \
     interfaces/ControllerModePlugin.h \
-    StarlabController.h
+    StarlabController.h \
+    StarlabConsoleWindow.h
 
-SOURCES += \ 
+SOURCES += \
     parameters/RichParameterSet.cpp \
-    parameters/ParametersFrame.cpp
+    parameters/ParametersFrame.cpp \
+    StarlabConsoleWindow.cpp
 
 # ---------------------------------------------
 # --                 PLUGINS                 --

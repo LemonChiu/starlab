@@ -2,6 +2,7 @@
 #include <QColor>
 #include <QDesktopWidget>
 #include <QGLFormat> /// @todo why in main.cpp???
+#include "StarlabConsoleWindow.h"
 #include "StarlabMainWindow.h"
 #include "StarlabApplicationGUI.h"
 #include "StarlabApplication.h"
@@ -11,7 +12,13 @@
 
 using namespace Starlab;
 
-int main(int argc, char *argv[]) { 
+#define DEBUG_CONSOLE
+
+int main(int argc, char *argv[]) {
+	/// Create Console Window for debugging
+#ifdef DEBUG_CONSOLE
+	DebugConsole::Instance();
+#endif
 	/// Create QT GUI app
 	StarlabApplicationGUI app(argc,argv);
 
