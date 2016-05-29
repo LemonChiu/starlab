@@ -1,1 +1,5 @@
 .DS_Store
+*.vcxproj
+*.filters
+
+surfacemesh_mode_arapdeform/ui_arap_widget.h

@@ -1,4 +1,11 @@
 *.pro.user
+*.vcxproj
+*.filters
+*.sln
 .DS_Store
 Starlab.app
 /StarlabPackage/
+
+plugins/gui_filter/ui_FilterDockWidget.h
+plugins/gui_windows/ui_layerDialog.h
+starlib/ui_ImageInterface.h
