@@ -2,7 +2,7 @@
 #include <QColor>
 #include <QDesktopWidget>
 #include <QGLFormat> /// @todo why in main.cpp???
-#include "StarlabConsoleWindow.h"
+#include "StarlabDebugConsole.h"
 #include "StarlabMainWindow.h"
 #include "StarlabApplicationGUI.h"
 #include "StarlabApplication.h"
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 	StarlabApplicationGUI app(argc,argv);
 
 	/// Create a starlab application
-	Application application;    
+	Application application;
 
 	/// Create a new window (@internal *new* is important)
 	auto mainWindow = QSharedPointer<MainWindow>(new MainWindow(&application));
@@ -36,11 +36,11 @@ int main(int argc, char *argv[]) {
 	for(int i=1; i<argc; i++)
 	    QApplication::sendEvent(mainWindow.data(), new QFileOpenEvent(argv[i]));
 
-	/// Automatically load layer menu if I opened more than one model    
+	/// Automatically load layer menu if I opened more than one model
 	if(mainWindow->document()->models().size()>=2)
-	    mainWindow->triggerMenuActionByName("Show Layers Dialog");    
+	    mainWindow->triggerMenuActionByName("Show Layers Dialog");
 
-	/// Show the window 
+	/// Show the window
 	/// (@internal see QWidget::activateWindow)
 	mainWindow->showNormal();
 	mainWindow->activateWindow();
@@ -55,5 +55,5 @@ int main(int argc, char *argv[]) {
 	if(!actionName.isEmpty()) mainWindow->triggerMenuActionByName(actionName);
 
 	/// Starts the event loop
-	return app.exec();    
+	return app.exec();
 }

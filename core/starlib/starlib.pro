@@ -30,12 +30,12 @@ HEADERS += \
     Starlab.h \
     interfaces/ControllerModePlugin.h \
     StarlabController.h \
-    StarlabConsoleWindow.h
+    StarlabDebugConsole.h
 
 SOURCES += \
     parameters/RichParameterSet.cpp \
     parameters/ParametersFrame.cpp \
-    StarlabConsoleWindow.cpp
+    StarlabDebugConsole.cpp
 
 # ---------------------------------------------
 # --                 PLUGINS                 --

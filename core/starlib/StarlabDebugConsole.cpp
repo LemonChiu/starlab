@@ -2,7 +2,7 @@
 #include <io.h>
 #include <fcntl.h>
 #include <iostream>
-#include "StarlabConsoleWindow.h"
+#include "StarlabDebugConsole.h"
 
 using namespace Starlab;
 
@@ -17,7 +17,7 @@ DebugConsole::DebugConsole()
     setvbuf(file, NULL, _IONBF, 0);
     *stdout = *file;
 
-    std::cout << "Ready! Debug Informations...\n" << std::endl;
+    std::cout << "Ready for debugging informations!...\n" << std::endl;
 }
 
 DebugConsole* DebugConsole::m_instance = NULL;
