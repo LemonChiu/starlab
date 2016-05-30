@@ -198,14 +198,14 @@ void DrawArea::init(){
     /// Background color from settings file
     QString backColorKey = "DefaultBackgroundColor";
 
-    QColor white_transp(136,157,179,255);
+    QColor white_transp(255,255,255,255);
 	settings()->setDefault(backColorKey, QVariant(white_transp));
 	setBackgroundColor(settings()->getQColor(backColorKey));
     camera()->setUpVector(Vec(0,1,0));
 
 	/// Simple background shading effect
 	QString backEffects = "EnableBackgroundEffect";
-	settings()->setDefault(backEffects, true);
+	settings()->setDefault(backEffects, false);
 	this->isBackgroundEffects = settings()->getBool(backEffects);
 
     resetViewport();
